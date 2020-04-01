@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CellStyleRendererComponent } from '../../ag-grid/renderers/cell-style-renderer/cell-style-renderer.component';
+import { GridApi, GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-grid-app',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridAppComponent implements OnInit {
 
+  public gridOptions: GridOptions;
+
   columnDefs = [
-    { headerName: 'Make', field: 'make' },
+    { headerName: 'Make', field: 'make',  cellRenderer: 'cellRenderer'},
     { headerName: 'Model', field: 'model' },
     { headerName: 'Price', field: 'price' }
   ];
@@ -23,6 +27,15 @@ export class GridAppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.gridOptions = {
+      frameworkComponents : {
+        cellRenderer: CellStyleRendererComponent
+      },
+      columnDefs: this.columnDefs,
+      rowData: this.rowData
+    };
+  
   }
 
 }

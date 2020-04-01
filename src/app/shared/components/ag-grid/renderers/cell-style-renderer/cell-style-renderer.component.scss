@@ -1,0 +1,67 @@
+.template-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+  word-wrap: break-word;
+  white-space: normal;
+  background-color: green;
+}
+
+.text-left {
+  justify-content: flex-start;
+}
+
+.text-center {
+  justify-content: center;
+}
+
+.text-right {
+  justify-content: flex-end;
+}
+
+.vertical-top {
+  align-items: flex-start;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.vertical-bottom {
+  align-items: flex-end;
+}
+
+.header {
+  background-color: darkblue;
+}
+
+.disabled {
+  color: gray;
+  background-color: gray;
+}
+
+.cell-indent {
+  padding-left: 15px;
+}
+
+.no-border-top {
+  border-top: none;
+}
+
+.no-border-right {
+  border-right: none;
+}
+
+.no-border-bottom {
+  border-bottom: none;
+}
+
+.no-border-left {
+  border-left: none;
+}
+
+.border-right {
+    border-right: thick;
+}

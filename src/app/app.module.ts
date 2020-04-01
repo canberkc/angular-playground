@@ -13,12 +13,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { AgGridModule } from 'ag-grid-angular';
 import { GridAppComponent } from './shared/components/ag-grid/grid-app/grid-app.component';
+import { CellStyleRendererComponent } from './shared/components/ag-grid/renderers/cell-style-renderer/cell-style-renderer.component';
+import { NavigationComponent } from './shared/components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    GridAppComponent
+    GridAppComponent,
+    CellStyleRendererComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,7 @@ import { GridAppComponent } from './shared/components/ag-grid/grid-app/grid-app.
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([CellStyleRendererComponent])
   ],
   providers: [],
   bootstrap: [AppComponent]
